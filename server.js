@@ -25,3 +25,15 @@ const port = 3000;
 app.listen(port, () => {
   console.log(`Weather-Journal App listening on port ${port}!`);
 });
+
+app.get("/weather", (req, res) => {
+  console.log(`projectData: ${JSON.stringify(projectData)}`);
+  res.send(projectData);
+});
+
+app.post("/weather", (req, res) => {
+  projectData.date = req.body.date;
+  projectData.temperature = req.body.main.temp;
+  projectData.feelings = req.body.feelings;
+  res.end();
+});

@@ -11,11 +11,11 @@
 <body>
   <div id="app">
     <div class="holder headline">
-      Weather Journal App
+      <h1>Weather Journal App</h1>
     </div>
-    <div class="holder zip">
+    <div class="holder">
       <label for="zip">Enter Zipcode here</label>
-      <input type="text" id="zip" placeholder="enter zip code here">
+      <input type="text" class="zip" id="zip" placeholder="enter zip code here">
     </div>
     <div class="holder feel">
       <label for="feelings">How are you feeling today?</label>
@@ -23,7 +23,7 @@
       <button id="generate" type="submit"> Generate </button>
     </div>
     <div class="holder entry">
-      <div class="title">Most Recent Entry</div>
+      <div class="title">Most Recent Entry <span id="city"></span></div>
       <div id="entryHolder">
         <div id="date"></div>
         <div id="temp"></div>
